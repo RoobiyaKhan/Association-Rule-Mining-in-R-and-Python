@@ -12,7 +12,6 @@ itemFrequencyPlot(dataset, topN = 10)
 # Training Apriori on the dataset
 rules = apriori(data = dataset,parameter = list(support = 0.003, confidence = 0.2)) #support =3*7/7500-products bought 
                                                 #3 times a day for 7 days divided by all transactions for that week
-                                                #confidence - depends on business goals- arbitrary choice
-                                                #both support and confidence - works on trial method,later we can change based on our goals(sales increase or revenue increase)
+                                                #confidence - depends on business goals- arbitrary choice                                              
 # Visualising the results
 inspect(sort(rules, by = 'lift')[1:10])
